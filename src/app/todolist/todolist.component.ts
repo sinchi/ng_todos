@@ -17,4 +17,8 @@ export class TodolistComponent implements OnInit {
     this.todos = this.todoService.getAllTodos();
   }
 
+  show(todo: Todo) {
+    console.log(todo);
+  }
+
 }

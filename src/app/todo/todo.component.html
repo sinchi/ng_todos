@@ -1,1 +1,4 @@
-<div>Todo</div>
+<div>
+  <label for="name">{{ todo.name }}</label>
+  <input type="checkbox" name="{{ todo.name }}" [checked]="todo.completed" >
+</div>
