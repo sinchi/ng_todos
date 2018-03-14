@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { TodolistComponent } from '../todolist/todolist.component';
+import { TodoComponent } from '../todo/todo.component';
+import { TodoEditComponent } from '../todo-edit/todo-edit.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/todosList', pathMatch: 'full' },
-  { path: 'todoList', component: TodolistComponent }
+  { path: 'todo/add', component: TodoEditComponent }
 ];
 
 @NgModule({

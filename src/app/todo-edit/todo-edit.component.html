@@ -1,0 +1,4 @@
+<div>
+    <label for="name">Task : </label>
+    <input type="text" #todoName (keyup)="addTodo(todoName.value, $event)" >
+</div>

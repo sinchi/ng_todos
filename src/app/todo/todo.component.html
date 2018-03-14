@@ -1,4 +1,20 @@
-<div>
-  <label for="name">{{ todo.name }}</label>
-  <input type="checkbox" name="{{ todo.name }}" [checked]="todo.completed" >
+<div *ngIf="!edit" (dblclick)="onTodoEdit(todo)" >
+    <input
+     #todoInput
+    type="checkbox"
+    name="{{ todo.name }}"
+    [checked]="todo.completed"
+    (change)="onTodoComplete(todo)"
+    >
+  <label for="name" [class.barre]="todo.completed">{{ todo.name }}</label>
+  <button (click)="onTodoDelete(todo)" >X</button>
 </div>
+
+<div *ngIf="edit" >
+  <input #name
+        value="{{ todo.name }}" [autofocus]="true"
+        (blur)="onEdit(todo, name.value)"
+        (keyup)="onEdit(todo, name.value, $event)"
+    >
+</div>
+

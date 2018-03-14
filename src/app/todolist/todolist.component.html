@@ -1,7 +1,12 @@
 <div>
+  <a routerLink="todo/add">Add Task</a>
   <ul>
     <li *ngFor="let todo of todos">
-      <app-todo [todo]="todo" (click)="show(todo)"></app-todo>
+      <app-todo
+        [todo]="todo"
+        ></app-todo>
     </li>
   </ul>
 </div>
+
+<router-outlet></router-outlet>
